@@ -1,6 +1,6 @@
 {
   "name": "pui",
-  "homepage": "https://jamiedorst.github.io/pui/final_project/",
+  "homepage": "https://jamiedorst.github.io/mahjong",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -e final_project",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
