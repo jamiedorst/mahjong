@@ -1,2 +1,0 @@
-# mahjong
-Mahjong Mastery Website
