@@ -20,7 +20,7 @@ function Gameplay() {
           <p>
             Players compete to create chows, pungs, and kongs to form a full
             hand of 14 tiles. The first player to achieve a winning hand
-            declares “Mahjong” and wins that round.
+            declares "Hu" and wins that round.
           </p>
         </div>
         <div className="faq1">

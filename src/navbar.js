@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div id="sideNav">
+    <nav id="sideNav">
       <ul id="navUL">
         <li>
           <h2>
@@ -116,7 +116,7 @@ function Navbar() {
           </li>
         </div>
       </ul>
-    </div>
+    </nav>
   );
 }
 
