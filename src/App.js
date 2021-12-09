@@ -15,7 +15,7 @@ function App() {
   return (
     <div id="App">
       {/* router to link my pages together */}
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={"/mahjong"}>
         <ScrollToTop />
         <Switch>
           {/* learn pages */}
