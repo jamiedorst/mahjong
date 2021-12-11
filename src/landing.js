@@ -10,7 +10,7 @@ function Landing() {
         <Navbar />
       </header>
       <body className="mBody">
-        <h1>Mahjong Mastery Site</h1>
+        <h1>Mahjong Mastery</h1>
         <h3>
           Welcome to the Mahjong Mastery site! Here you will learn how to play
           Mahjong with Mahjong Competition Rules. Click below to get started, or
@@ -51,7 +51,7 @@ function Landing() {
             <p>
               Mahjong requires exactly four players and one mahjong set. You
               will be well served to sit at a square table. Other than that,
-              nothing else is required! You may enjoy the game.
+              nothing else is required!
             </p>
           </div>
         </div>
