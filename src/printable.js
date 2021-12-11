@@ -20,6 +20,7 @@ function Print() {
           src={preview}
           alt="Preview of printable Mahjong guide"
         />
+        {/* triggers download */}
         <a
           href={guide}
           style={{ textDecoration: "none" }}

@@ -2,6 +2,7 @@ import "./App.css";
 import Navbar from "./navbar.js";
 import { Link } from "react-router-dom";
 
+// describe basic mahjong gameplay
 function Gameplay() {
   return (
     <div>
@@ -72,6 +73,7 @@ function Gameplay() {
             opposite side of the wall.
           </p>
         </div>
+        {/* forward and back buttons to navigate between pages */}
         <div className="buttons">
           <Link style={{ textDecoration: "none" }} to="/sets">
             <button className="filledButton">BACK</button>

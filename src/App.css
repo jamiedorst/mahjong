@@ -7,7 +7,7 @@
 NAVBAR
 
 */
-#navUL {
+.navUL {
   list-style-type: none;
   padding: 0;
   padding-top: 3vh;
@@ -17,7 +17,8 @@ NAVBAR
   margin-left: 3vw;
 }
 
-#sideNav {
+.sideNav {
+  display: flex;
   background: #f5f0eb;
   width: 23vw;
   height: 100vh;
@@ -41,6 +42,10 @@ NAVBAR
   text-decoration: underline;
 }
 
+#bun {
+  display: none;
+}
+
 /*
 
 PAGES
@@ -60,7 +65,7 @@ PAGES
   background-color: white;
   color: #009600;
   border: 4px solid #009600;
-  font-size: 1.3vw;
+  font-size: calc(7px + 1.3vw);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 800;
   padding-top: 0.5%;
@@ -104,7 +109,7 @@ PAGES
 .filledButton {
   background-color: black;
   color: white;
-  font-size: 1.2vw;
+  font-size: calc(7px + 1.2vw);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 800;
   padding-top: 0.7vw;
@@ -122,7 +127,7 @@ PAGES
 .pillButton {
   background-color: #f0fcf0;
   color: #009600;
-  font-size: 1.2vw;
+  font-size: calc(7px + 1.2vw);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   padding-top: 0.2vw;
@@ -138,7 +143,7 @@ PAGES
 .pillButtonDe {
   background-color: #ffffff;
   color: gray;
-  font-size: 1.2vw;
+  font-size: calc(7px + 1.2vw);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   padding-top: 0.2vw;
@@ -212,7 +217,7 @@ FAN
 }
 
 .fanImg {
-  height: 5.2vw;
+  height: 5.1vw;
   padding-bottom: 1vw;
   margin-right: 0.5vw;
 }
@@ -227,8 +232,13 @@ QUIZ
 
 */
 
-.frame {
+#frame {
+  display: flex;
   margin-top: 2.2vw;
+}
+
+#alsoGone {
+  display: flex;
 }
 
 .embed {
@@ -237,4 +247,145 @@ QUIZ
   -o-transform: scale(1.15);
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
+}
+
+#mob {
+  display: none;
+}
+
+/*
+
+!!!!!!!!!!!!!!!!!!SMALL PAGE SIZE!!!!!!!!!!!!!!!!!!
+
+*/
+
+@media only screen and (max-width: 850px) {
+  /*
+
+NAVBAR
+
+*/
+  .navUL {
+    padding-top: 5vh;
+    margin-left: 10vw;
+  }
+
+  .sideNav {
+    width: 65vw;
+    height: 100vh;
+  }
+
+  #bun {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 3%;
+    margin-left: 3%;
+    z-index: 50;
+    position: fixed;
+  }
+
+  #flex {
+    display: flex;
+  }
+
+  #none {
+    display: none;
+  }
+
+  #bun:hover {
+    cursor: pointer;
+  }
+
+  .burg {
+    width: 100%;
+    padding: 0;
+    margin: 1.5px;
+    border: 1px solid black;
+  }
+
+  /*
+
+PAGES
+
+*/
+
+  .mBody {
+    width: 90vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 5vw;
+    padding-top: 4vw;
+  }
+
+  .hollowButton {
+    border: 2px solid #009600;
+    font-size: calc(7px + 1.3vw);
+  }
+
+  .allImg {
+    height: 10.5vw;
+  }
+
+  .specialImg {
+    height: 56vw;
+  }
+
+  .filledButton {
+    font-size: calc(7px + 1.2vw);
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .pillButton {
+    font-size: calc(7px + 1.2vw);
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.8vw;
+  }
+
+  .pillButtonDe {
+    font-size: calc(7px + 1.2vw);
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1.5vw;
+    padding-right: 1.8vw;
+  }
+
+  /*
+
+FAN
+
+*/
+
+  .fan {
+    box-shadow: 0 0 3px 1px #dddddd;
+    border-radius: 10px;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    padding-bottom: 3.5vw;
+    margin-top: 5vw;
+  }
+
+  .fanImg {
+    height: 7.1vw;
+  }
+
+  /* 
+
+QUIZ
+
+*/
+
+  #frame {
+    display: none;
+  }
+
+  #mob {
+    display: flex;
+  }
+
+  #alsoGone {
+    display: none;
+  }
 }

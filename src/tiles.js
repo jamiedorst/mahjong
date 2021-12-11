@@ -67,7 +67,7 @@ function Tiles() {
           <h2>Flower Tiles</h2>
           <p>
             Flower tiles are composed of 4 flowers and 4 seasons. They serve as
-            a sort of bonus tile, rather than a played tile.
+            a kind of bonus tile, rather than a played tile.
           </p>
           <img
             className="allImg"

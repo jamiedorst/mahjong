@@ -14,7 +14,7 @@ function Setup() {
         <h1>Game Setup</h1>
         <h3>
           The set up for Mahjong is highly calcuated. There are a few main steps
-          to go through before you may start playing a game.
+          to go through before you can start playing a game.
         </h3>
         <div className="faq1">
           <h2>Determining Seating</h2>
@@ -81,6 +81,7 @@ function Setup() {
             opposite side of the wall.
           </p>
         </div>
+        {/* forward and back buttons through learn material */}
         <div className="buttons">
           <Link style={{ textDecoration: "none" }} to="/tiles">
             <button className="filledButton">BACK</button>

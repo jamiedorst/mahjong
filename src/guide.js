@@ -39,6 +39,7 @@ import Navbar from "./navbar.js";
 import Fan from "./fan.js";
 import React, { Component } from "react";
 
+// tile images and their alt text for reference
 const tiles = [
   { id: 0, img: b1, alt: "Bamboo 1 Tile" },
   { id: 1, img: b2, alt: "Bamboo 2 Tile" },
@@ -86,9 +87,11 @@ const tiles = [
   },
 ];
 
+// all 81 fan
+// type property used for filtering
 const fans = [
   {
-    name: "01. Big Four Winds",
+    name: "01 Big Four Winds",
     type: "honors",
     description: "Pungs of all winds",
     points: "88 pts",
@@ -112,7 +115,7 @@ const fans = [
       "Exclude Big Three Winds, All Pungs, Prevalent Wind, Seat Wind, Pung of Terminals or Honors",
   },
   {
-    name: "02. Big Three Dragons",
+    name: "02 Big Three Dragons",
     type: "honors",
     description: "Pungs of all dragons",
     points: "88 pts",
@@ -135,7 +138,7 @@ const fans = [
     exclusions: "Exclude Two Dragon Pungs, Dragon Pung",
   },
   {
-    name: "03. All Green",
+    name: "03 All Green",
     type: "other",
     description: "All sets use only green tiles",
     points: "88 pts",
@@ -158,7 +161,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "04. Nine Gates",
+    name: "04 Nine Gates",
     type: "other",
     description:
       "Tiles 1, 1, 1, 2-8, 9, 9, 9 of one suit, with the last tile being any of the same suit",
@@ -183,7 +186,7 @@ const fans = [
       "Exclude Full Flush, Concealed Hand, Pung of Terminals or Honors, No Honors",
   },
   {
-    name: "05. Four Kongs",
+    name: "05 Four Kongs",
     type: "kongs",
     description: "Four kongs",
     points: "88 pts",
@@ -206,7 +209,7 @@ const fans = [
     exclusions: "Exclude Three Kongs, All Pungs, Single Wait",
   },
   {
-    name: "06. Seven Shifted Pairs",
+    name: "06 Seven Shifted Pairs",
     type: "other",
     description:
       "Seven pairs of one suit, each pair shifted up one from the last",
@@ -231,7 +234,7 @@ const fans = [
       "Exclude Seven Pairs, Concealed Hand, Single Wait, No Honors, Full Flush",
   },
   {
-    name: "07. Thirteen Orphans",
+    name: "07 Thirteen Orphans",
     type: "other",
     description:
       "One of each honor and terminal tile, plus any one tile to form a pair",
@@ -255,7 +258,7 @@ const fans = [
     exclusions: "Exclude All Types, Concealed Hand, Single Wait",
   },
   {
-    name: "08. All Terminals",
+    name: "08 All Terminals",
     type: "pungs",
     description: "All sets contain only 1s or 9s",
     points: "64 pts",
@@ -278,7 +281,7 @@ const fans = [
     exclusions: "Exclude All Pungs, Outside Hand, Pung of Terminals or Honors",
   },
   {
-    name: "09. Little Four Winds",
+    name: "09 Little Four Winds",
     type: "honors",
     description: "Three pungs of three winds, and a pair of the last wind",
     points: "64 pts",
@@ -301,7 +304,7 @@ const fans = [
     exclusions: "Exclude Pung of Terminals or Honors",
   },
   {
-    name: "10. Little Three Dragons",
+    name: "10 Little Three Dragons",
     type: "honors",
     description: "Two pungs of two dragons, and a pair of the last dragon",
     points: "64 pts",
@@ -324,7 +327,7 @@ const fans = [
     exclusions: "Exclude Two Dragon Pungs, Dragon Pung",
   },
   {
-    name: "11. All Honors",
+    name: "11 All Honors",
     type: "honors",
     description: "All sets contain only wind or dragon tiles",
     points: "64 pts",
@@ -347,7 +350,7 @@ const fans = [
     exclusions: "Exclude All Pungs, Outside Hand, Pung of Terminals or Honors",
   },
   {
-    name: "12. Four Concealed Pungs",
+    name: "12 Four Concealed Pungs",
     type: "pungs",
     description: "Four unmelded pungs",
     points: "64 pts",
@@ -371,7 +374,7 @@ const fans = [
       "Exclude All Pungs, Concealed Hand, Three Concealed Pungs, Two Concealed Pungs",
   },
   {
-    name: "13. Pure Terminal Chows",
+    name: "13 Pure Terminal Chows",
     type: "chows",
     description:
       "Two of each terminal chow and a pair of 5s, all from the same suit",
@@ -396,7 +399,7 @@ const fans = [
       "Exclude Full Flush, All Chows, Pure Double Chow, Two Terminal Chows, No Honors",
   },
   {
-    name: "14. Quadruple Chow",
+    name: "14 Quadruple Chow",
     type: "chows",
     description: "Four identical chows of the same suit",
     points: "48 pts",
@@ -419,7 +422,7 @@ const fans = [
     exclusions: "Exclude Tile Hog, Pure Triple Chow, Pure Double Chow",
   },
   {
-    name: "15. Four Pure Shifted Pungs",
+    name: "15 Four Pure Shifted Pungs",
     type: "pungs",
     description:
       "Four pungs of the same suit, each shifted up by one from the last",
@@ -443,7 +446,7 @@ const fans = [
     exclusions: "Exclude All Pungs, Pure Shifted Pungs",
   },
   {
-    name: "16. Four Pure Shifted Chows",
+    name: "16 Four Pure Shifted Chows",
     type: "chows",
     description:
       "Four chows of the same suit, each shifted up by one or two from the last",
@@ -467,7 +470,7 @@ const fans = [
     exclusions: "Exclude Pure Shifted Chows, Two Terminal Chows",
   },
   {
-    name: "17. Three Kongs",
+    name: "17 Three Kongs",
     type: "kongs",
     description: "Three kongs",
     points: "32 pts",
@@ -490,7 +493,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "18. All Terminals and Honors",
+    name: "18 All Terminals and Honors",
     type: "honors",
     description: "All sets contain only 1s, 9s, and honor tiles",
     points: "32 pts",
@@ -513,7 +516,7 @@ const fans = [
     exclusions: "Exclude All Pungs, Outside Hand, Pung of Terminals or Honors",
   },
   {
-    name: "19. Seven Pairs",
+    name: "19 Seven Pairs",
     type: "other",
     description: "Hand consists of just seven pairs",
     points: "24 pts",
@@ -536,7 +539,7 @@ const fans = [
     exclusions: "Exclude Concealed Hand, Single Wait",
   },
   {
-    name: "20. Greater Honors and Knitted Tiles",
+    name: "20 Greater Honors and Knitted Tiles",
     type: "other",
     description:
       "One of each honor tile, and all suits represented by interweaving",
@@ -560,7 +563,7 @@ const fans = [
     exclusions: "Exclude Concealed Hand, All Types",
   },
   {
-    name: "21. All Even Pungs",
+    name: "21 All Even Pungs",
     type: "pungs",
     description: "All sets composed only with even tiles",
     points: "24 pts",
@@ -583,7 +586,7 @@ const fans = [
     exclusions: "Exclude All Pungs, All Simples, No Honors",
   },
   {
-    name: "22. Full Flush",
+    name: "22 Full Flush",
     type: "other",
     description: "All sets composed of tiles from a single suit",
     points: "24 pts",
@@ -606,7 +609,7 @@ const fans = [
     exclusions: "Exclude No Honors",
   },
   {
-    name: "23. Pure Triple Chow",
+    name: "23 Pure Triple Chow",
     type: "chows",
     description: "Three identical chows of one suit",
     points: "24 pts",
@@ -629,7 +632,7 @@ const fans = [
     exclusions: "Exclude Pure Double Chow",
   },
   {
-    name: "24. Pure Shifted Pungs",
+    name: "24 Pure Shifted Pungs",
     type: "pungs",
     description:
       "Three pungs of the same suit, each shifted up by one from the last",
@@ -653,7 +656,7 @@ const fans = [
     exclusions: "Exclude All Pungs",
   },
   {
-    name: "25. Upper Tiles",
+    name: "25 Upper Tiles",
     type: "other",
     description: "All sets use only 7s, 8s, and/or 9s",
     points: "24 pts",
@@ -676,7 +679,7 @@ const fans = [
     exclusions: "Exclude Upper Four, No Honors",
   },
   {
-    name: "26. Middle Tiles",
+    name: "26 Middle Tiles",
     type: "other",
     description: "All sets use only 4s, 5s, and/or 6s",
     points: "24 pts",
@@ -699,7 +702,7 @@ const fans = [
     exclusions: "Exclude All Simples, No Honors",
   },
   {
-    name: "27. Lower Tiles",
+    name: "27 Lower Tiles",
     type: "other",
     description: "All sets use only 1s, 2s, and/or 3s",
     points: "24 pts",
@@ -722,7 +725,7 @@ const fans = [
     exclusions: "Exclude Lower Four, No Honors",
   },
   {
-    name: "28. Pure Straight",
+    name: "28 Pure Straight",
     type: "chows",
     description:
       "Three consecutive chows of one suit forming a sequence from 1-9",
@@ -746,7 +749,7 @@ const fans = [
     exclusions: "Exclude Short Straight, Two Terminal Chows",
   },
   {
-    name: "29. Three-Suited Terminal Chows",
+    name: "29 Three-Suited Terminal Chows",
     type: "chows",
     description:
       "Both terminal chows from two suits, and a pair of 5s from the last suit",
@@ -771,7 +774,7 @@ const fans = [
       "Exclude All Chows, Mixed Double Chow, Two Terminal Chows, No Honors",
   },
   {
-    name: "30. Pure Shifted Chows",
+    name: "30 Pure Shifted Chows",
     type: "chows",
     description:
       "Three chows of one suit, each shifted up by one or two from the last",
@@ -795,7 +798,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "31. All Fives",
+    name: "31 All Fives",
     type: "other",
     description: "All sets contain at least one 5",
     points: "16 pts",
@@ -818,7 +821,7 @@ const fans = [
     exclusions: "Exclude All Simples, No Honors",
   },
   {
-    name: "32. Triple Pung",
+    name: "32 Triple Pung",
     type: "pungs",
     description: "Three pungs of the same number, one in each suit",
     points: "16 pts",
@@ -841,7 +844,7 @@ const fans = [
     exclusions: "Exclude Double Pungs",
   },
   {
-    name: "33. Three Concealed Pungs",
+    name: "33 Three Concealed Pungs",
     type: "pungs",
     description: "Three pungs achieved without melding",
     points: "16 pts",
@@ -864,7 +867,7 @@ const fans = [
     exclusions: "Exclude Two Concealed Pungs",
   },
   {
-    name: "34. Lesser Honors and Knitted Tiles",
+    name: "34 Lesser Honors and Knitted Tiles",
     type: "other",
     description:
       "5 or 6 honor tiles, and all suits represented by interweaving",
@@ -888,7 +891,7 @@ const fans = [
     exclusions: "Exclude Two Concealed Pungs",
   },
   {
-    name: "35. Knitted Straight",
+    name: "35 Knitted Straight",
     type: "other",
     description: "A full sequence in all suits represented by interweaving",
     points: "12 pts",
@@ -911,7 +914,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "36. Upper Four",
+    name: "36 Upper Four",
     type: "other",
     description: "All sets use only 6s, 7s, 8s, and/or 9s",
     points: "12 pts",
@@ -934,7 +937,7 @@ const fans = [
     exclusions: "Exclude No Honors",
   },
   {
-    name: "37. Lower Four",
+    name: "37 Lower Four",
     type: "other",
     description: "All sets use only 1s, 2s, 3s, and/or 4s",
     points: "12 pts",
@@ -957,7 +960,7 @@ const fans = [
     exclusions: "Exclude No Honors",
   },
   {
-    name: "38. Big Three Winds",
+    name: "38 Big Three Winds",
     type: "honors",
     description: "Three pungs of winds",
     points: "12 pts",
@@ -980,7 +983,7 @@ const fans = [
     exclusions: "Exclude Pung of Terminals or Honors",
   },
   {
-    name: "39. Mixed Straight",
+    name: "39 Mixed Straight",
     type: "chows",
     description:
       "Three consecutive chows, one from each suit, forming a sequence from 1-9",
@@ -1004,7 +1007,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "40. Reversible Tiles",
+    name: "40 Reversible Tiles",
     type: "other",
     description: "All sets use only vertically symmetric tiles",
     points: "8 pts",
@@ -1027,7 +1030,7 @@ const fans = [
     exclusions: "Exclude One Voided Suit",
   },
   {
-    name: "41. Mixed Triple Chow",
+    name: "41 Mixed Triple Chow",
     type: "chows",
     description: "Three identical chows, one from each suit",
     points: "8 pts",
@@ -1050,7 +1053,7 @@ const fans = [
     exclusions: "Exclude One Voided Suit",
   },
   {
-    name: "42. Mixed Shifted Pungs",
+    name: "42 Mixed Shifted Pungs",
     type: "pungs",
     description:
       "Three pungs, one from each suit, each shifted up by one from the last",
@@ -1074,7 +1077,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "43. Chicken Hand",
+    name: "43 Chicken Hand",
     type: "other",
     description: "Any hand that does not receive any points from any other fan",
     points: "8 pts",
@@ -1097,7 +1100,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "44. Last Tile Drawn",
+    name: "44 Last Tile Drawn",
     type: "events",
     description: "Win on the last tile drawn from the wall",
     points: "8 pts",
@@ -1105,7 +1108,7 @@ const fans = [
     exclusions: "Exclude Self-Drawn",
   },
   {
-    name: "45. Last Tile Claimed",
+    name: "45 Last Tile Claimed",
     type: "events",
     description:
       "Win on a discard after there are no more tiles left in the wall",
@@ -1114,7 +1117,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "46. Out with Replacement Tile",
+    name: "46 Out with Replacement Tile",
     type: "events",
     description:
       "Win on the replacement tile drawn after melding a kong (not flower tile)",
@@ -1123,7 +1126,7 @@ const fans = [
     exclusions: "Exclude Self-Drawn",
   },
   {
-    name: "47. Robbing the Kong",
+    name: "47 Robbing the Kong",
     type: "events",
     description:
       "Win by completing a chow that someone intended to promote a pung with",
@@ -1132,7 +1135,7 @@ const fans = [
     exclusions: "Exclude Last Tile",
   },
   {
-    name: "48. Two Concealed Kongs",
+    name: "48 Two Concealed Kongs",
     type: "kongs",
     description: "Two concealed (but declared) kongs",
     points: "8 pts",
@@ -1155,7 +1158,7 @@ const fans = [
     exclusions: "Exclude Two Concealed Pungs, Concealed Kong",
   },
   {
-    name: "49. All Pungs",
+    name: "49 All Pungs",
     type: "pungs",
     description: "Four pungs",
     points: "6 pts",
@@ -1178,7 +1181,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "50. Half Flush",
+    name: "50 Half Flush",
     type: "other",
     description: "All sets are in tiles of one suit and honor tiles",
     points: "6 pts",
@@ -1201,7 +1204,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "51. Mixed Shifted Chows",
+    name: "51 Mixed Shifted Chows",
     type: "chows",
     description:
       "Three chows, all from the same suit, each shifted up by one from the last",
@@ -1225,7 +1228,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "52. All Types",
+    name: "52 All Types",
     type: "other",
     description:
       "Each of the five sets is composed of a different suit and honor such that each is represented",
@@ -1249,7 +1252,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "53. Melded Hand",
+    name: "53 Melded Hand",
     type: "events",
     description:
       "All sets are exposed, including the last, which is completed on a discard",
@@ -1258,7 +1261,7 @@ const fans = [
     exclusions: "Exclude Single Wait",
   },
   {
-    name: "54. Two Dragon Pungs",
+    name: "54 Two Dragon Pungs",
     type: "honors",
     description: "Two pungs of dragons",
     points: "6 pts",
@@ -1281,7 +1284,7 @@ const fans = [
     exclusions: "Exclude Dragon Pung",
   },
   {
-    name: "55. Outside Hand",
+    name: "55 Outside Hand",
     type: "other",
     description: "All sets contain at least one 1, 9, or honor tile",
     points: "4 pts",
@@ -1304,7 +1307,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "56. Fully Concealed Hand",
+    name: "56 Fully Concealed Hand",
     type: "events",
     description:
       "All sets are concealed, including the last, which is completed by self-draw",
@@ -1313,7 +1316,7 @@ const fans = [
     exclusions: "Exclude Self-Drawn",
   },
   {
-    name: "57. Two Melded Kongs",
+    name: "57 Two Melded Kongs",
     type: "kongs",
     description: "Two exposed kongs",
     points: "4 pts",
@@ -1336,7 +1339,7 @@ const fans = [
     exclusions: "Exclude Melded Kong",
   },
   {
-    name: "58. Last Tile",
+    name: "58 Last Tile",
     type: "events",
     description:
       "A win on the tile that is the last of its kind due to discards and exposed sets",
@@ -1345,7 +1348,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "59. Dragon Pung",
+    name: "59 Dragon Pung",
     type: "honors",
     description: "Pung of any dragon",
     points: "2 pts",
@@ -1368,7 +1371,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "60. Prevalent Wind",
+    name: "60 Prevalent Wind",
     type: "honors",
     description: "Pung of the wind corresponding to the round",
     points: "2 pts",
@@ -1391,7 +1394,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "61. Seat Wind",
+    name: "61 Seat Wind",
     type: "honors",
     description: "Pung of the wind corresponding to the player's seat",
     points: "2 pts",
@@ -1414,7 +1417,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "62. Concealed Hand",
+    name: "62 Concealed Hand",
     type: "events",
     description:
       "All sets concealed except the last, which is completed by discard",
@@ -1423,7 +1426,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "63. All Chows",
+    name: "63 All Chows",
     type: "honors",
     description: "Four chows and a pair of non-honor tiles",
     points: "2 pts",
@@ -1446,7 +1449,7 @@ const fans = [
     exclusions: "Exclude No Honors",
   },
   {
-    name: "64. Tile Hog",
+    name: "64 Tile Hog",
     type: "other",
     description:
       "Four identical tiles used, without forming a kong, across two or more sets",
@@ -1470,7 +1473,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "65. Double Pung",
+    name: "65 Double Pung",
     type: "pungs",
     description: "Two pungs of the same number in different suits",
     points: "2 pts",
@@ -1493,7 +1496,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "66. Two Concealed Pungs",
+    name: "66 Two Concealed Pungs",
     type: "pungs",
     description: "Two unmelded pungs",
     points: "2 pts",
@@ -1516,7 +1519,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "67. Concealed Kong",
+    name: "67 Concealed Kong",
     type: "kongs",
     description: "One unmelded kong",
     points: "2 pts",
@@ -1539,7 +1542,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "68. All Simples",
+    name: "68 All Simples",
     type: "other",
     description: "All sets use only tiles 2-8",
     points: "2 pts",
@@ -1562,7 +1565,7 @@ const fans = [
     exclusions: "Exclude No Honors",
   },
   {
-    name: "69. Pure Double Chow",
+    name: "69 Pure Double Chow",
     type: "chows",
     description: "Two identical chows of the same suit",
     points: "1 pt",
@@ -1585,7 +1588,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "70. Mixed Double Chow",
+    name: "70 Mixed Double Chow",
     type: "chows",
     description: "Two identical chows of different suits",
     points: "1 pt",
@@ -1608,7 +1611,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "71. Short Straight",
+    name: "71 Short Straight",
     type: "chows",
     description: "Two consecutive chows of the same suit",
     points: "1 pt",
@@ -1631,7 +1634,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "72. Two Terminal Chows",
+    name: "72 Two Terminal Chows",
     type: "chows",
     description: "One of each terminal chow from the same suit",
     points: "1 pt",
@@ -1654,7 +1657,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "73. Pung of Terminals or Honors",
+    name: "73 Pung of Terminals or Honors",
     type: "honors",
     description: "Pung of 1s, 9s, or non-special winds",
     points: "1 pt",
@@ -1677,7 +1680,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "74. Melded Kong",
+    name: "74 Melded Kong",
     type: "kongs",
     description: "One exposed kong",
     points: "1 pt",
@@ -1700,7 +1703,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "75. One Voided Suit",
+    name: "75 One Voided Suit",
     type: "other",
     description: "Only two of the three suits are represented",
     points: "1 pt",
@@ -1723,7 +1726,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "76. No Honors",
+    name: "76 No Honors",
     type: "other",
     description: "All sets use only suited tiles",
     points: "1 pt",
@@ -1746,7 +1749,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "77. Edge Wait",
+    name: "77 Edge Wait",
     type: "events",
     description: "Win after waiting only for a 3 or 7 in a terminal chow",
     points: "1 pt",
@@ -1754,7 +1757,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "78. Closed Wait",
+    name: "78 Closed Wait",
     type: "events",
     description: "Win after waiting only for a tile in the middle of a chow",
     points: "1 pt",
@@ -1762,7 +1765,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "79. Single Wait",
+    name: "79 Single Wait",
     type: "events",
     description: "Win after waiting only for a tile to complete a pair",
     points: "1 pt",
@@ -1770,7 +1773,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "80. Self-Drawn",
+    name: "80 Self-Drawn",
     type: "events",
     description: "Win on a tile from the wall",
     points: "1 pt",
@@ -1778,7 +1781,7 @@ const fans = [
     exclusions: "",
   },
   {
-    name: "81. Flower Tile",
+    name: "81 Flower Tile",
     type: "events",
     description:
       "Each declared and replaced flower tile (does not count toward 8-point minimum)",
@@ -1788,6 +1791,7 @@ const fans = [
   },
 ];
 
+// filter buttons
 const buttons = [
   { id: 0, name: "chows", active: true },
   { id: 1, name: "pungs", active: true },
@@ -1801,20 +1805,25 @@ class Guide extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // set state of filters, fan displayed, and fan count
       buttons: buttons,
       fanA: fans,
       count: fans.length,
     };
   }
 
-  // // filter by type of fan
+  // filter by type of fan
   handleToggle = (id) => {
     let updatedFan = [];
     let missingFan = [];
+    // depending on which filter is toggled
+    // remove or add the corresponding fan
     const updatedButtons = this.state.buttons.map((button) => {
       if (button.id === id) {
         if (button.active === true) {
+          // array with those that should be removed
           missingFan = fans.filter((f) => f.type.includes(button.name));
+          // array with those that are left over
           updatedFan = this.state.fanA.filter(
             (x) => missingFan.indexOf(x) === -1
           );
@@ -1823,11 +1832,12 @@ class Guide extends Component {
             active: !button.active,
           };
         } else {
+          // array with those that should be added back
           missingFan = fans.filter((f) => f.type.includes(button.name));
-          const tempFan = this.state.fanA
+          // array with all that should be included, sorted by number
+          updatedFan = this.state.fanA
             .concat(missingFan)
             .sort((a, b) => a.name.localeCompare(b.name));
-          updatedFan = [...new Set(tempFan)];
           return {
             ...button,
             active: !button.active,
@@ -1845,7 +1855,6 @@ class Guide extends Component {
   };
 
   render() {
-    console.log(this.state.fanA);
     return (
       <div>
         <header>
@@ -1863,6 +1872,7 @@ class Guide extends Component {
             Use the buttons below to filter which fan are visible. Filters apply
             only when they are always implied.
           </p>
+          {/* filter buttons */}
           {this.state.buttons.map((el) => (
             <button
               key={el.id}
@@ -1872,7 +1882,9 @@ class Guide extends Component {
               {el.name}
             </button>
           ))}
+          {/* display count of currently rendered fan */}
           <h4 className="htext">{this.state.count} Fan</h4>
+          {/* all (selected) fan */}
           <div className="faq1">
             {this.state.fanA.map((a) => (
               <Fan

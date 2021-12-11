@@ -9,6 +9,7 @@ import Guide from "./guide.js";
 import Print from "./printable.js";
 import Quiz from "./quiz.js";
 import ScrollToTop from "./scrollToTop";
+import { Interpolator } from "react-apply-darkmode";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -16,20 +17,29 @@ function App() {
     <div id="App">
       {/* router to link my pages together */}
       <Router basename={"/mahjong"}>
+        {/* scroll to top on page reload and after "next" */}
         <ScrollToTop />
+        {/* automatic dark mode based on system setting */}
+
         <Switch>
-          {/* learn pages */}
-          <Route exact path="/tiles" component={Tiles} />
-          <Route exact path="/setup" component={Setup} />
-          <Route exact path="/sets" component={Sets} />
-          <Route exact path="/gameplay" component={Gameplay} />
-          <Route exact path="/winning" component={Winning} />
-          {/* resource pages */}
-          <Route exact path="/fan" component={Guide} />
-          <Route exact path="/printout" component={Print} />
-          <Route exact path="/quiz" component={Quiz} />
-          {/* home page */}
-          <Route exact path="/" component={Landing} />
+          <Interpolator
+            appearance="dark"
+            watchSystem={true}
+            filter={{ brightness: 100, contrast: 90, sepia: 10 }}
+          >
+            {/* learn pages */}
+            <Route exact path="/tiles" component={Tiles} />
+            <Route exact path="/setup" component={Setup} />
+            <Route exact path="/sets" component={Sets} />
+            <Route exact path="/gameplay" component={Gameplay} />
+            <Route exact path="/winning" component={Winning} />
+            {/* resource pages */}
+            <Route exact path="/fan" component={Guide} />
+            <Route exact path="/printout" component={Print} />
+            <Route exact path="/quiz" component={Quiz} />
+            {/* home page */}
+            <Route exact path="/" component={Landing} />
+          </Interpolator>
         </Switch>
       </Router>
     </div>

@@ -15,18 +15,20 @@ class Quiz extends Component {
             Practice recognizing fan by guessing how many points the displayed
             hand is worth.
           </h3>
-          <p>
+          <p id="alsoGone">
             Adjust the sliders and selections at the bottom to change the odds
             of various types of hands appearing.
           </p>
+          {/* frame crops embedded site for optimal appearance */}
           <div
-            className="frame"
+            id="frame"
             style={{
               overflow: "hidden",
               height: "65vh",
               width: "height*1.255",
             }}
           >
+            {/* embed from other website */}
             <iframe
               src="https://mahjongsoft.com/mtweb.php"
               title="Website Page Title"
@@ -40,6 +42,12 @@ class Quiz extends Component {
               }}
             ></iframe>
           </div>
+          {/* link to other website when screen is too small */}
+          <p id="mob">
+            Visit&nbsp;
+            <a href="https://mahjongsoft.com/mtweb.php">this website </a>
+            &nbsp;to use the quiz, or open this page on your desktop.
+          </p>
         </body>
       </div>
     );

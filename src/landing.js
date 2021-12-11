@@ -2,6 +2,7 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import Navbar from "./navbar.js";
 
+// landing/home page
 function Landing() {
   return (
     <div>
@@ -16,6 +17,7 @@ function Landing() {
           keep reading to learn more about the game. Use the navigation bar on
           the left to bounce around sections.
         </h3>
+        {/* button takes you to first page in "learn" section */}
         <Link
           className="centered"
           style={{ textDecoration: "none" }}

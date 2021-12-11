@@ -121,6 +121,7 @@ function Tiles() {
             ></img>
           </div>
         </div>
+        {/* buttons to go forward or backward in learn sequence */}
         <div className="buttons">
           <Link style={{ textDecoration: "none" }} to="/setup">
             <button className="filledButton">BACK</button>
