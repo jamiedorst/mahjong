@@ -9,6 +9,7 @@ Mahjong Mastery is a site to learn how to play Mahjong with Mahjong Competition 
 ## PUI Submission
 
 Writeup: reflection.pdf
+
 Video: walkthrough.mov
 
 ### Extra Credit
