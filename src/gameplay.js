@@ -43,26 +43,26 @@ function Gameplay() {
             player whose turn is next) may claim the discard to form a chow. If
             two players wish to claim a discard, claim priority comes into
             effect: Hu (win) &#8594; kong &#8594; pung &#8594; chow. If two
-            players wish to claim a tile for a Mahjong, the player whose turn
-            would be next takes priority. Sets must be melded if a tile comes
-            from a discard, while self-drawn sets may stay concealed. Melded
-            sets are exposed and immutable. Discards may only be claimed to
-            complete a pair unless to declare Mahjong.
+            players wish to claim a tile for a win, the player whose turn would
+            be next takes priority. Sets must be melded if a tile comes from a
+            discard, while self-drawn sets may stay concealed. Melded sets are
+            exposed and immutable. Discards may not be claimed to complete a
+            pair unless to declare Hu.
           </p>
         </div>
         <div className="faq1">
           <h2>Kongs</h2>
           <p>
-            If a player has a kong in their hand, they must draw an extra tile
-            (per kong) to ensure the rest of the hand may be completed. When a
-            kong is completed via discard, it is exposed as usual and the player
-            draws an extra tile for their hand from the opposite side of the
-            wall. If you have a pung in your hand and you draw the fourth tile
-            from the wall, the kong may stay concealed. However, it should still
-            be declared face down such that you have reason to draw an extra
-            tile. If you have a melded pung and you draw the fourth tile from
-            the wall, it may be added to the pung to create a kong (but it
-            doesn’t need to be).
+            If a player has a kong, they must draw an extra tile (per kong) to
+            ensure the rest of the hand may be completed. When a kong is
+            completed via discard, it is exposed as usual and the player draws
+            an extra tile for their hand from the opposite side of the wall. If
+            you have a pung in your hand and you draw the fourth tile from the
+            wall, the kong may stay concealed. However, it should still be
+            declared face down such that you have reason to draw an extra tile.
+            If you have a melded pung and you draw the fourth tile from the
+            wall, it may be added to the pung to create a kong. Players are not
+            required to create a kong, even if they have four of the same tile.
           </p>
         </div>
         <div className="faq1">

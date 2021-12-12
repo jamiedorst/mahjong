@@ -20,8 +20,8 @@ function Winning() {
           <p>
             In order to win, your hand must be worth at least 8 points,
             determined by Fan. If your hand has less than 8 points and you
-            declare mahjong, you are disqualified from winning the round. View
-            the pages under the Resources tab to learn more about Fan.
+            declare Hu, you are disqualified from winning the round. View the
+            pages under the Resources tab to learn more about Fan.
           </p>
         </div>
         <div className="faq1">
@@ -29,12 +29,12 @@ function Winning() {
           <p>
             Even if multiple fan apply to a given hand, their point values may
             not necessarily add up directly. To count points correctly, arrange
-            tiles in one orientation and add fan that are applicable without
-            reordering. A set may not be used for the same fan twice in one
-            hand. A set may not be used for more than two different fan in one
-            hand. Pungs may count as kongs in some fan, but kongs are never
-            counted as pungs. Fan that are implied by a greater fan do not get
-            additionally counted (refer to exclusions to bypass this rule)
+            your tiles and add fan that are applicable without reordering. A set
+            may not be used for the same fan twice in one hand. A set may not be
+            used for more than two different fan in one hand. Pungs may count as
+            kongs in some fan, but kongs are never counted as pungs. Fan that
+            are implied by a greater fan are not also counted (refer to
+            exclusions to bypass this rule)
           </p>
         </div>
         <div className="faq1">
@@ -43,8 +43,8 @@ function Winning() {
             Each player pays 8 points to the winner. If the round was won on a
             discard, the player who discarded the winning tile must also pay the
             winner the value of the winning hand. If the round was won on
-            self-draw, each other player must pay the winner the value of the
-            winning hand.
+            self-draw, each other player must also pay the winner the value of
+            the winning hand.
           </p>
         </div>
         <div className="faq1">
